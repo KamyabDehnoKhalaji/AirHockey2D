@@ -27,6 +27,7 @@ public class ScoreScript : MonoBehaviour
                 uiManager.ShowRestartCanvas(true);
         }
     }
+
     private int PlayerScore
     {
         get { return playerScore; }
@@ -45,6 +46,12 @@ public class ScoreScript : MonoBehaviour
             AiScoreTxt.text = (++AiScore).ToString();
         else
             PlayerScoreTxt.text = (++PlayerScore).ToString();
+    }
+
+    public void ResetScores()
+    {
+        AiScore = PlayerScore = 0;
+        AiScoreTxt.text = PlayerScoreTxt.text = "0";
     }
 
 
